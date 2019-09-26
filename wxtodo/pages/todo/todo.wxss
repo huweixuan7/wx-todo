@@ -1,0 +1,40 @@
+/* pages/todo/todo.wxss */
+.content{
+  padding: 0 25rpx;
+  font-size: 24rpx;
+}
+.header{
+  height: 120rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.header input{
+  padding-left: 50rpx;
+  height: 80rpx;
+  width: 500rpx;
+  border: 1px solid #ddd;
+}
+.header text{
+  display: block;
+  color: green;
+}
+.itemList{
+  margin-top:40rpx;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+}
+.footbtn{
+  display: flex;
+  justify-content: space-between;
+}
+.msg{
+  text-align: center;
+  margin-top: 100rpx;
+  font-size: 36rpx;
+  color:#ccc;
+}

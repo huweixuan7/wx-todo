@@ -1,0 +1,38 @@
+<!--pages/history/history.wxml-->
+<view class="content">
+  <view wx:if="{{!history.length}}" style="text-align:center;margin:50rpx 0rpx">
+    <view style="font-size:40rpx;color:#bbb; text-align:center;">暂无历史数据</view>
+    <view style="font-size:30rpx;color:#ddd;">请前往「待办」添加待办事项</view>
+  </view>
+
+  <view class="history">
+    <block wx:for="{{ dates }}" wx:key="{{index}}">
+      <view class='date'>{{ item }}</view>
+      <view class='blockList' >
+        <view wx:for="{{ groupedHistory[item] }}" wx:key="{{index}}" class='itemlist'>
+          <block wx:if="{{ item.action=='finishAll' || item.action=='restartAll' || item.action=='clear'}}">
+            <view class='{{item.action}}'>{{ actionTexts[item.action] }}</view>
+          </block>
+
+          <block wx:else>
+            <view class="{{ item.action }}">
+              <text>{{ actionTexts[item.action] }}</text>
+              <text>{{item.todo.content}}</text>
+            </view>
+          </block>
+        </view>
+
+      </view>
+
+    </block>
+
+
+  
+  </view>
+
+
+
+
+
+
+</view>

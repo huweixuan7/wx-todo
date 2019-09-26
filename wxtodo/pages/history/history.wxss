@@ -1,0 +1,32 @@
+/* pages/history/history.wxss */
+.content{
+  padding:20rpx 26rpx;
+  color: #9B9B9B;
+}
+.date {
+  font-size: 30rpx;
+  border-left: 10rpx solid #7ED321;
+  padding-left: 10rpx;
+  margin-top: 30rpx;
+  font-weight: bold;
+  color: #000;
+}
+
+.history .blockList{
+  display: flex;
+  flex-direction: column;
+  font-size:28rpx;
+}
+.history .blockList .itemlist{
+  padding:10rpx 0;  
+  border-bottom:1px solid #ddd; 
+}
+.itemlist text{
+  margin-right: 60rpx;
+}
+.finishAll,.clear{
+  color: #9B9B9B;
+}
+.restartAll,.restart{
+  color: #7ED321;
+}

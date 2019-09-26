@@ -1,0 +1,21 @@
+<!--pages/detail/detail.wxml-->
+<view class="content">
+  <view>
+    <input placeholder="待办内容..." auto-focus bindinput="inputContent"></input>
+  </view>
+  <view>
+    <view class="tagsList" wx:if='{{tags}}'>
+      <view wx:for="{{tags}}" wx:key="{{ key }}">
+        <text>{{ item }}</text>
+        <icon type="clear" size="17" data-index="{{ index }}" bindtap="removeTag"></icon>
+      </view>
+    </view>
+    <input placeholder="添加标签..." value="{{ tag }}" bindconfirm="addTag" wx:if="{{ tags.length < 3  }}"></input>
+    <input placeholder="标签最多只能添加三个" disabled wx:if="{{ tags.length >= 3  }}"></input>
+  </view>
+  <view>
+    <text>备注：</text>
+    <input style="background:#eee;" bindinput="inputExtra"></input>
+  </view>
+  <button bindtap="create" >创建</button>
+</view>

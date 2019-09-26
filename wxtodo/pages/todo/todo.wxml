@@ -1,0 +1,20 @@
+<view class='content'>
+
+  <view class="header">
+    <input placeholder="快速添加。。。" value="{{content}}" bindconfirm="quickAdd"></input>
+    <text bindtap="toDetail">添加待办</text>    
+  </view>
+
+
+  <view class="itemList" wx:if="{{ todos.length }}">
+    <item wx:for = "{{ todos }}" wx:key="{{inex}}" bindtap="toggleFinished" content="{{item.content}}" binditemremove = 'itemRemove' tags="{{item.tags}}" extra="{{ item.extra }}" finished = "{{ item.finished }}" data-index = '{{ index }}'></item>
+  </view>
+
+  <view class="footbtn" wx:if="{{ todos.length }}">
+    <text bindtap="allFinished">{{ leftStr }}</text>
+    <text wx:if="{{ numNofinished }}">{{ numNofinished }}项未完成</text>
+    <text bindtap="clearAll">清空所有已完成</text>
+  </view>
+
+  <view class="msg" wx:if="{{ !todos.length }}">恭喜已经处理完成所有待办事项</view>
+</view>

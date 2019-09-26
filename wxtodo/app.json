@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/todo/todo",
+    "pages/history/history",
+    "pages/detail/detail"
+    
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7ED321",
+    "navigationBarTitleText": "wxtodo",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/todo/todo",
+      "text": "待办",
+      "iconPath": "assets/todo.png",
+      "selectedIconPath": "assets/todo-active.png"
+    },
+    {
+      "pagePath": "pages/history/history",
+      "text": "历史",
+      "iconPath": "assets/history.png",
+      "selectedIconPath": "assets/history-active.png"
+    }
+    ],
+    "selectedColor": "#7ED321",
+    "color": "#9B9B9B",
+    "backgroundColor": "#F8F8F8",
+    "borderStyle": "black"
+    
+  },
+  "sitemapLocation": "sitemap.json"
+}
